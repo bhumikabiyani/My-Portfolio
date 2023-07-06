@@ -7,6 +7,8 @@ import openai
 import threading
 
 
+
+
 documents = SimpleDirectoryReader('./data').load_data()
 
 app = Flask(__name__)
@@ -35,7 +37,7 @@ def initialize():
     num_output = 8
     max_chunk_overlap = 0.2
     prompt_helper = PromptHelper(max_input_size, num_output, max_chunk_overlap)
-    index = GPTVectorStoreIndex(documents, llm_predictor=llm_predictor, prompt_helper=prompt_helper)
+    index = GPTVectorStoreIndex.from_documents(documents, llm_predictor=llm_predictor, prompt_helper=prompt_helper)
     
     # Store index in global scope
     globals()["index"] = index
@@ -46,10 +48,11 @@ def predict():
         return "Index not initialized. Please call the /initialize endpoint first."
     
     text = request.get_json().get("message")
+    print(text)
     # Generate response
     response = generate_response(index, text.lower())
     message = {"answer" : response}
     return jsonify(message)
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
