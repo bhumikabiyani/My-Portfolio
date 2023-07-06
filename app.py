@@ -28,7 +28,7 @@ def initialize():
     global llm_predictor, prompt_helper, index
     
     # Initialize llm_predictor
-    llm_predictor = LLMPredictor(llm=ChatOpenAI(temperature=0.4, model_name="ada-search-document"))
+    llm_predictor = LLMPredictor(llm=ChatOpenAI(temperature=0.1, model_name="ada-search-document"))
 
     # Initialize prompt_helper and index
     max_input_size = 4096
