@@ -1,0 +1,22 @@
+name: Deploy to GCP
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build Docker image
+        run: docker build -t gcr.io/my-portfolio-392311/my-portfolio .
+
+      - name: Push Docker image
+        run: docker push gcr.io/my-portfolio-392311/my-portfolio
+
+      - name: Deploy to App Engine
+        run: gcloud app deploy
