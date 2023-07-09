@@ -1,0 +1,22 @@
+name: Deploy to GCP
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build Docker image
+        run: docker build -t gcr.io/sage-nucleus-350117/My-Portfolio .
+
+      - name: Push Docker image
+        run: docker push gcr.io/sage-nucleus-350117/My-Portfolio
+
+      - name: Deploy to App Engine
+        run: gcloud app deploy
