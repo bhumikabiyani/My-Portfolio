@@ -63,7 +63,7 @@ convo = model.start_chat(history=[
   },
 ])
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 
 @app.route("/")
@@ -87,5 +87,5 @@ def predict():
       reply = "Something went wrong. Please try again."
     return jsonify({"answer": reply})
 
-if _name_ == "_main_":
+if __name__ == "_main_":
     app.run(debug=False)
