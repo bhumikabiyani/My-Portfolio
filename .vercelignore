@@ -1,0 +1,6 @@
+# .vercelignore
+__pycache__/
+*.pyc
+tests/
+docs/
+.env
