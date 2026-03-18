@@ -2,35 +2,68 @@
 <html lang="en">
 
 <head>
-  <title>Bhumika Biyani-Portfolio</title>
+  <title>Bhumika Biyani — Software Developer Portfolio</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Portfolio of Bhumika Biyani — Software Developer at Hella Infra Market. Full-stack engineer specializing in React Native, Node.js, Golang, Python, AI/ML, and scalable system design." />
+  <meta name="keywords" content="Bhumika Biyani, Software Developer, Full Stack, React Native, Node.js, Golang, Python, AI, ML, Portfolio" />
+  <meta name="author" content="Bhumika Biyani" />
+  <meta property="og:title" content="Bhumika Biyani — Software Developer Portfolio" />
+  <meta property="og:description" content="Full-stack engineer specializing in React Native, Node.js, Golang, Python, AI/ML." />
+  <meta property="og:type" content="website" />
+
   <link href="../static/images/favicon.png" rel="icon">
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="../static/css/open-iconic-bootstrap.min.css" />
   <link rel="stylesheet" href="../static/css/animate.css" />
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
   <link rel="stylesheet" href="../static/css/owl.carousel.min.css" />
   <link rel="stylesheet" href="../static/css/owl.theme.default.min.css" />
   <link rel="stylesheet" href="../static/css/magnific-popup.css" />
-
   <link rel="stylesheet" href="../static/css/aos.css" />
-
   <link rel="stylesheet" href="../static/css/ionicons.min.css" />
-
   <link rel="stylesheet" href="../static/css/flaticon.css" />
   <link rel="stylesheet" href="../static/css/icomoon.css" />
   <link rel="stylesheet" href="../static/css/style.css" />
   <link rel="stylesheet" href="../static/css/styleBot.css" />
+  <link rel="stylesheet" href="../static/css/custom.css" />
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <!-- Cursor Glow -->
+  <div id="cursor-glow" class="cursor-glow"></div>
+
+  <!-- Floating Social Sidebar -->
+  <div class="social-sidebar" id="social-sidebar">
+    <a href="https://github.com/bhumikabiyani" target="_blank" title="GitHub" id="social-github">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://linkedin.com/in/biyanibhumika121" target="_blank" title="LinkedIn" id="social-linkedin">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://www.instagram.com/techieburger.io/" target="_blank" title="Instagram" id="social-instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://nika19.medium.com/" target="_blank" title="Medium" id="social-medium">
+      <i class="fab fa-medium-m"></i>
+    </a>
+    <a href="mailto:biyanibhumika121@gmail.com" title="Email" id="social-email">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-to-top" id="scroll-to-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="../templates/index.html">Bhumika</a>
+      <a class="navbar-brand" href="#">Bhumika</a>
       <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
         data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="oi oi-menu"></span> Menu
@@ -48,16 +81,13 @@
             <a href="#resume-section" class="nav-link"><span>Resume</span></a>
           </li>
           <li class="nav-item">
-            <a href="#services-section" class="nav-link"><span>Services</span></a>
-          </li>
-          <li class="nav-item">
             <a href="#skills-section" class="nav-link"><span>Skills</span></a>
           </li>
           <li class="nav-item">
             <a href="#projects-section" class="nav-link"><span>Projects</span></a>
           </li>
           <li class="nav-item">
-            <a href="#blog-section" class="nav-link"><span>My Blog</span></a>
+            <a href="#achievements-section" class="nav-link"><span>Achievements</span></a>
           </li>
           <li class="nav-item">
             <a href="#contact-section" class="nav-link"><span>Contact</span></a>
@@ -66,7 +96,10 @@
       </div>
     </div>
   </nav>
+
+  <!-- ======= Hero Section ======= -->
   <section id="home-section" class="hero">
+    <canvas id="particles-canvas"></canvas>
     <div class="home-slider owl-carousel">
       <div class="slider-item">
         <div class="overlay"></div>
@@ -82,36 +115,12 @@
               <div class="text">
                 <span class="subheading">Hello!</span>
                 <h1 class="mb-4 mt-3">I'm <span>Bhumika Biyani</span></h1>
-                <h2 class="mb-4">Software Developer</h2>
+                <h2 class="mb-4">
+                  <span id="typing-text" class="typing-text">Software Developer</span><span class="typing-cursor"></span>
+                </h2>
                 <p>
-                  <a href="#contact-section" class="btn btn-primary py-3 px-4">Hire me</a>
-                  <a href="#about-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="slider-item">
-        <div class="overlay"></div>
-        <div class="container">
-          <div class="row d-flex no-gutters slider-text align-items-end justify-content-end"
-            data-scrollax-parent="true">
-            <div class="one-third js-fullheight order-md-last img"
-              style="background-image: url(../static/images/me2.1.png)">
-              <div class="overlay"></div>
-            </div>
-            <div class="one-forth d-flex align-items-center ftco-animate"
-              data-scrollax=" properties: { translateY: '70%' }">
-              <div class="text">
-                <span class="subheading">Hello!</span>
-                <h1 class="mb-4 mt-3">
-                  I'm an <span>UG</span> from India
-                </h1>
-                <p>
-                  <a href="#contact-section" class="btn btn-primary py-3 px-4">Hire me</a>
-                  <a href="#about-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a>
+                  <a href="#contact-section" class="btn btn-primary py-3 px-4" id="hero-hire-btn">Hire me</a>
+                  <a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4" id="hero-work-btn">My works</a>
                 </p>
               </div>
             </div>
@@ -121,65 +130,52 @@
     </div>
   </section>
 
+  <!-- ======= About Section ======= -->
   <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
     <div class="container">
       <div class="row d-flex">
-        <div class="col-md-6 col-lg-5 d-flex">
-          <div class="img-about img d-flex align-items-stretch">
-            <div class="overlay"></div>
-            <div class="one-third js-fullheight order-md-last img"
-              style="background-image: url(../static/images/me3.jpeg)"></div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-          <div class="row justify-content-start pb-3">
-            <div class="col-md-12 heading-section ftco-animate">
-              <!-- <h1 class="big">About</h1> -->
+        <div class="col-md-12 col-lg-12 pb-5">
+          <div class="row pt-4">
+            <!-- Left Column: Summary -->
+            <div class="col-md-6 heading-section ftco-animate">
               <h2 class="mb-4">About Me</h2>
               <p>
                 Hi there!<br>
-                I’m a Computer Science undergraduate specializing in Artificial Intelligence and Machine Learning, with a strong 
-                foundation in software development. I enjoy designing and building scalable applications, combining clean architecture
-                 principles with modern frameworks. My passion lies in solving complex problems—whether it’s developing backend 
-                 services, integrating APIs, or implementing AI-powered features. I’m eager to apply my skills in fast-paced 
-                 environments, contribute to impactful projects, and keep exploring new technologies that improve performance, 
-                 usability, and user experience. A quick learner and strong team player, I’m driven by curiosity and a commitment 
-                 to delivering reliable, high-quality software.
+                I'm a Software Developer at <strong>Hella Infra Market</strong> with a B.Tech in Computer Science 
+                (AI & ML) from Lovely Professional University. I build scalable full-stack applications across 
+                web and mobile platforms, combining clean architecture with modern frameworks like React, 
+                React Native, Node.js, and Golang.<br><br>
+                My passion lies in solving complex engineering challenges — from designing Backend-for-Frontend 
+                services that cut network calls by 30%, to building AI-powered interview platforms. I'm a 
+                <strong>1st-place winner at IMHAX 2025</strong> (inter-company hackathon). Always eager to learn, ship, and make an impact.
               </p>
-              <ul class="about-info mt-4 px-md-0 px-2">
+            </div>
+            
+            <!-- Right Column: Info & CV -->
+            <div class="col-md-6 ftco-animate d-flex flex-column justify-content-center pl-md-5">
+              <ul class="about-info px-md-0 px-2 mb-4">
                 <li class="d-flex">
                   <span>Name:</span> <span>Bhumika Biyani</span>
                 </li>
                 <li class="d-flex">
-                  <span>Date of birth:</span> <span>January 19, 2004</span>
+                  <span>Role:</span> <span>Software Developer</span>
                 </li>
                 <li class="d-flex">
-                  <span>Address:</span>
-                  <span>Bengaluru, Karnataka, INDIA</span>
-                </li>
-                <li class="d-flex">
-                  <span>Zip code:</span> <span>560034</span>
+                  <span>Location:</span>
+                  <span>Bengaluru, Karnataka, India</span>
                 </li>
                 <li class="d-flex">
                   <span>Email:</span> <span>biyanibhumika121@gmail.com</span>
                 </li>
-                <!-- <li class="d-flex">
-                    <span>Phone: </span> <span>+917014225113</span>
-                  </li> -->
               </ul>
-            </div>
-          </div>
-
-          <div class="counter-wrap ftco-animate d-flex mt-md-3">
-            <div class="text">
-              <!-- <p class="mb-4">
-                  <span class="number" data-number="10">0</span>
-                  <span>Project complete</span>
-                </p> -->
-              <p>
-                <a href="https://drive.google.com/file/d/1Lfqs20XcMyMVxfERxVyxlGakeSKa71gA/view?usp=sharing"
-                  class="btn btn-primary py-3 px-3">Download CV</a>
-              </p>
+              <div class="counter-wrap d-flex mt-2">
+                <div class="text">
+                  <p class="mb-0">
+                    <a href="https://drive.google.com/file/d/1NT6uorJ1_gIRRsNSlVQYVvJXjwAoTsvF/view?usp=sharing"
+                      class="btn btn-primary py-3 px-4" id="download-cv-btn" target="_blank">Download CV</a>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -190,11 +186,8 @@
   <!-- ======= Resume Section ======= -->
   <section id="resume-section" class="ftco-section ftco-no-pb">
     <div class="resume container">
-
       <div class="col-md-10 heading-section text-center ftco-animate">
-
         <h2 class="mb-4">Resume</h2>
-        <!-- <h1 class="big big-2">Resume</h1> -->
       </div>
 
       <div class="row">
@@ -203,710 +196,297 @@
           <div class="resume-item pb-0">
             <h4>Bhumika Biyani</h4>
             <p><em>
-              Final-year B.Tech student in AI & ML and SDE Intern at Hella Infra Market. 
-              Skilled in full-stack development, AI, and ML-powered solutions using Golang, Python, TypeScript, React Native, NLP pipelines, Docker, and Kubernetes. 
-              Experienced in building projects like a movie booking system, LLM-powered shorts extractor, and AI chatbots. 
-              Recognized among the top 5% in Data Analytics and SQL, and winner of IMHAX 2025 inter-company hackathon.
+              Software Developer at Hella Infra Market with expertise in full-stack development, 
+              AI-powered applications, and scalable system design. Proficient in Node.js, React Native, 
+              TypeScript, Golang, and Python. Winner of IMHAX 2025 inter-company hackathon.
             </em></p>
           </div>
 
           <h3 class="resume-title">Education</h3>
           <div class="resume-item">
-            <h4>Bachelor of Technology in Computer Science (AI / ML)</h4>
-            <h5>2021 - 2025 </h5>
-            <p><em>Lovely Professional University, Punjab , IN</em></p>
-            <p> Performance: 8.43 CGPA</p>
+            <h4>B.Tech in Computer Science & Engineering (AI-ML)</h4>
+            <h5>Sep 2021 – Aug 2025</h5>
+            <p><em>Lovely Professional University, Jalandhar, Punjab</em></p>
+            <p>CGPA: 8.3 / 10.0</p>
+            <p>Coursework: Data Structures, Algorithms, DBMS, OS, CN, Cloud Computing, AI, ML, NLP</p>
           </div>
-          <div class="resume-item">
-            <h4>Higher Secondary School</h4>
-            <h5>2019 - 2021</h5>
-            <p><em>CBSE, IN </em></p>
-            <p> Performance: 89%</p>
-          </div>
-          <!-- <div class="resume-item">
-							<h4>Secondary School</h4>
-							<h5>2007 - 2019</h5>
-							<p><em>CBSE, IN </em></p>
-							<p> Performance: 93%</p>
-						</div> -->
         </div>
+
         <div class="col-lg-6">
           <h3 class="resume-title">Professional Experience</h3>
 
           <div class="resume-item">
-            <a target="_blank" href="#">
-              <h4>SDE Intern</h4>
-            </a>
-            <h5>10-2024 - Present</h5>
+            <h4>Software Developer</h4>
+            <h5>Aug 2025 – Present</h5>
             <p><em>Hella Infra Market Pvt Ltd, Bangalore</em></p>
-            <p>
-              <ul>
-                <li>Developed end-to-end features for both web and mobile platforms using React (Web) and React Native (Android & iOS) with TypeScript for type safety and maintainability.</li>
-                <li>Built a custom Backend-for-Frontend (BFF) from scratch using Node.js and Express, tailored to frontend needs.</li>
-                <li>Created a unified Redux architecture as a proof-of-concept to dynamically manage API calls and shared state across modules.</li>
-                <li>Implemented a dynamic form generation system based on JSON configuration, enabling scalable and reusable UI workflows.</li>
-              </ul>
-            </p>
-          </div>   
+            <ul>
+              <li>Designed and implemented a custom Backend for Frontend (BFF) using Node.js and Express to aggregate 8+ microservice APIs, reducing frontend network calls by 30%.</li>
+              <li>Designed a scalable Redux architecture to centralize API state management across modules, improving maintainability and reducing duplicated data-fetching logic.</li>
+              <li>Developed a dynamic form generation framework using JSON-driven configurations, enabling 10+ configurable forms without additional frontend code.</li>
+            </ul>
+          </div>
 
           <div class="resume-item">
-            <a target="_blank" href="">
-              <h4>Live Project at network18</h4>
-            </a>
-            <h5>10-2023 - 02-2024</h5>
-            <p><em>Network18 Media and Investments, IN</em></p>
-            <p>
+            <h4>Software Developer Intern</h4>
+            <h5>Oct 2024 – Aug 2025</h5>
+            <p><em>Hella Infra Market Pvt Ltd, Bangalore</em></p>
             <ul>
-              <li>Worked with large data sets, trained and fine-tuned ML models, and utilized MS Excel for
-                data analysis.
-                
-              </li>
-              <li>Developed a tool to create news shorts from long news videos using Gemini API, LLM
-                models, Assembly AI and NLP pipelines. 
-               </li>
-              <li>	Learned and applied text preprocessing, vectorization, normalization and basics of
-                neural networks. </li>
-				
-            </ul>
-            </p>
-          </div>       
-
-
-          <!-- <div class="resume-item">
-							<h4>Web Development & Designing</h4>
-							<h5>06-2021 - 07-2021</h5>
-							<p><em>The , IN</em></p>
-							<p>
-							<ul>
-								<li>Developed and designed information systems for clients</li>
-								<li>Assisted team with various aspects of project</li>
-								<li>Collaborated with other developers in the team</li>
-							</ul>
-							</p>
-						</div> -->
-          <!-- <div class="resume-item">
-							<h4>Graphic Design Intern</h4>
-							<h5>05-2021 - 10-2021</h5>
-							<p><em>Blended Learning, IN</em></p>
-							<p>
-							<ul>
-								<li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and
-									advertisements).</li>
-								<li>Recommended and consulted with clients on the most appropriate graphic design</li>
-							</ul>
-							</p>
-						</div> -->
-        </div>
-      </div>
-
-    </div>
-
-
-
-
-  </section><!-- End Resume Section -->
-
-
-  <!-- <section class="ftco-section ftco-no-pb" id="resume-section">
-      <div class="container">
-        <div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p>
-             Proficient in data visualization techniques utilizing Tableau, I have successfully communicated complex information in a visually engaging manner. Additionally, I possess strong skills in data cleaning, management, and the development of professional-grade Machine Learning models. These capabilities enable me to make informed and profitable decisions based on data-driven insights.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="resume-wrap ftco-animate">
-              <span class="date">2021-2025</span>
-              <h2>B-tech in CSE (AI/ML)</h2>
-              <span class="position">Lovely Professional University</span> <br>
-              <span class="position"><b> Performance: </b>8.45 CGPA</span>
-              <p class="mt-4">
-                
-              </p>
-            </div>
-            <div class="resume-wrap ftco-animate">
-              <span class="date">2007-2021</span>
-              <h2>Higher Secondary School</h2>
-              <span class="position">Saint Paul's Sr. Sec. School</span> <br>
-              <span class="position"><b>Performance: </b>89%</span>
-              <p class="mt-4">
-                
-              </p>
-            </div>
-            <div class="resume-wrap ftco-animate">
-              <span class="date">2014-2015</span>
-              <h2>Diploma in Computer</h2>
-              <span class="position">Cambridge University</span>
-              <p class="mt-4">
-                A small river named Duden flows by their place and supplies it
-                with the necessary regelialia. It is a paradisematic country, in
-                which roasted parts of sentences fly into your mouth.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="resume-wrap ftco-animate">
-              <span class="date">2014-2015</span>
-              <h2>Art &amp; Creative Director</h2>
-              <span class="position">Cambridge University</span>
-              <p class="mt-4">
-                A small river named Duden flows by their place and supplies it
-                with the necessary regelialia. It is a paradisematic country, in
-                which roasted parts of sentences fly into your mouth.
-              </p>
-            </div>
-            <div class="resume-wrap ftco-animate">
-              <span class="date">2014-2015</span>
-              <h2>Wordpress Developer</h2>
-              <span class="position">Cambridge University</span>
-              <p class="mt-4">
-                A small river named Duden flows by their place and supplies it
-                with the necessary regelialia. It is a paradisematic country, in
-                which roasted parts of sentences fly into your mouth.
-              </p>
-            </div>
-            <div class="resume-wrap ftco-animate">
-              <span class="date">2017-2018</span>
-              <h2>UI/UX Designer</h2>
-              <span class="position">Cambridge University</span>
-              <p class="mt-4">
-                A small river named Duden flows by their place and supplies it
-                with the necessary regelialia. It is a paradisematic country, in
-                which roasted parts of sentences fly into your mouth.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-center mt-5">
-          <div class="col-md-6 text-center ftco-animate">
-            <p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-  <!-- <section class="ftco-section" id="services-section">
-    <div class="container">
-      <div class="row justify-content-center py-5 mt-5">
-        <div class="col-md-12 heading-section text-center ftco-animate">
-          <h2 class="mb-4">Services</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 text-center d-flex ftco-animate">
-          <a class="services-1">
-            <span class="icon">
-              <i class="flaticon-analysis"></i>
-            </span>
-            <div class="desc">
-              <h3 class="mb-5">Data Analysis</h3>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 text-center d-flex ftco-animate">
-          <a class="services-1">
-            <span class="icon">
-              <i class="flaticon-flasks"></i>
-            </span>
-            <div class="desc">
-              <h3 class="mb-5">Python developement</h3>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 text-center d-flex ftco-animate">
-          <a class="services-1">
-            <span class="icon">
-              <i class="flaticon-ideas"></i>
-            </span>
-            <div class="desc">
-              <h3 class="mb-5">ML Based Models</h3>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-md-4 text-center d-flex ftco-animate">
-          <a class="services-1">
-            <span class="icon">
-              <i class="fa-brands fa-java"></i>              
-              </span>
-              <div class=" desc">
-                <h3 class="mb-5">MYSQL</h3>
-        </div>
-        </a>
-      </div>
-
-      <div class="col-md-4 text-center d-flex ftco-animate">
-        <a class="services-1">
-          <span class="icon">
-            <i class="fa-solid fa-pen"></i>
-          </span>
-          <div class="desc">
-            <h3 class="mb-5">Web Designing</h3>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-4 text-center d-flex ftco-animate">
-        <a class="services-1">
-          <span class="icon">
-            <i class="fa-brands fa-cloudversify"></i>
-          </span>
-          <div class="desc">
-            <h3 class="mb-5">Web Scrapping</h3>
-          </div>
-        </a>
-      </div>
-    </div>
-    </div>
-  </section> -->
-
-  <section class="ftco-section" id="skills-section">
-    <div class="container">
-      <div class="row justify-content-center pb-5">
-        <div class="col-md-12 heading-section text-center ftco-animate">
-          <h2 class="mb-4">My Skills</h2>
-        </div>
-      </div>
-      <div class="row">
-  
-        <div class="col-md-6 animate-box">
-          <div class="progress-wrap ftco-animate">
-            <h3>Golang Development</h3>
-            <div class="progress">
-              <div class="progress-bar color-1" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                aria-valuemax="100" style="width: 90%">
-                <span>90%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-md-6 animate-box">
-          <div class="progress-wrap ftco-animate">
-            <h3>Python Development</h3>
-            <div class="progress">
-              <div class="progress-bar color-2" role="progressbar" aria-valuenow="95" aria-valuemin="0"
-                aria-valuemax="100" style="width: 95%">
-                <span>95%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-md-6 animate-box">
-          <div class="progress-wrap ftco-animate">
-            <h3>Java Development</h3>
-            <div class="progress">
-              <div class="progress-bar color-3" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                aria-valuemax="100" style="width: 50%">
-                <span>50%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-md-6 animate-box">
-          <div class="progress-wrap ftco-animate">
-            <h3>React Native & React (TypeScript)</h3>
-            <div class="progress">
-              <div class="progress-bar color-4" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                aria-valuemax="100" style="width: 90%">
-                <span>90%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-md-6 animate-box">
-          <div class="progress-wrap ftco-animate">
-            <h3>Redux Observables</h3>
-            <div class="progress">
-              <div class="progress-bar color-5" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-                aria-valuemax="100" style="width: 85%">
-                <span>85%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-md-6 animate-box">
-          <div class="progress-wrap ftco-animate">
-            <h3>Machine Learning & Data Science Concepts</h3>
-            <div class="progress">
-              <div class="progress-bar color-6" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                aria-valuemax="100" style="width: 90%">
-                <span>90%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-md-6 animate-box">
-          <div class="progress-wrap ftco-animate">
-            <h3>NLP Pipelines & LLM Models</h3>
-            <div class="progress">
-              <div class="progress-bar color-7" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-                aria-valuemax="100" style="width: 85%">
-                <span>85%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-md-6 animate-box">
-          <div class="progress-wrap ftco-animate">
-            <h3>Docker & Kubernetes</h3>
-            <div class="progress">
-              <div class="progress-bar color-8" role="progressbar" aria-valuenow="50" aria-valuemin="0"
-                aria-valuemax="100" style="width: 50%">
-                <span>50%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-md-6 animate-box">
-          <div class="progress-wrap ftco-animate">
-            <h3>SQL (PostgreSQL, MySQL)</h3>
-            <div class="progress">
-              <div class="progress-bar color-9" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-                aria-valuemax="100" style="width: 85%">
-                <span>85%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-md-6 animate-box">
-          <div class="progress-wrap ftco-animate">
-            <h3>Automation & Web Scraping</h3>
-            <div class="progress">
-              <div class="progress-bar color-10" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                aria-valuemax="100" style="width: 80%">
-                <span>80%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-      </div>
-    </div>
-  </section>  
-
-  <section id="projects-section" class="ftco-section">
-    <div class="container">
-      <div class="col-md-12 heading-section text-center ftco-animate">
-        <h2 class="mb-4">Projects</h2>
-      </div>
-  
-      <div class="row">
-        <!-- Project 1 -->
-        <div class="col-md-12 mb-4 d-flex">
-          <img src="../static/images/mbsImage.png" class="img-fluid mr-4" alt="Movie Booking System" style="max-width:200px; border-radius:10px;" loading="lazy">
-          <div>
-            <h4>
-              <a target="_blank" href="https://github.com/bhumikabiyani/movie-booking-system">Movie Booking System</a>
-              <small>(React Native & Golang)</small>
-            </h4>
-            <ul style="margin-bottom:0;">
-              <li>Full-stack cross-platform movie ticket booking app with Golang backend (DDD architecture) and PostgreSQL database.</li>
-              <li>Dynamic seat selection with real-time availability and reactive state management using Redux Observables.</li>
-              <li>Containerized with Docker and deployed on Minikube (Kubernetes) for scalable local testing.</li>
+              <li>Developed end-to-end features across web (React) and mobile (React Native: Android & iOS) platforms using TypeScript, improving reliability and reducing runtime errors.</li>
+              <li>Integrated UI flows with backend microservices via well-structured REST APIs, improving data flow and reducing load time across key user journeys.</li>
             </ul>
           </div>
-        </div>
-        
-  
-        <!-- Project 2 -->
-        <div class="col-md-12 mb-4 d-flex">
-          <img src="../static/images/shorts.png" class="img-fluid mr-4" alt="Shorts Extractor" style="max-width:200px; border-radius:10px;" loading="lazy">
-          <div>
-            <h4>
-              <a target="_blank" href="https://github.com/bhumikabiyani/LongToShorts">Shorts Extractor</a>
-              <small>(NLP & LLM)</small>
-            </h4>
-            <p>
-              Automated creation of YouTube-style shorts from long videos using AssemblyAI for transcription, spaCy for similarity analysis, Google Generative AI for scripting, and MoviePy+FFmpeg for video trimming. Deployed on Streamlit.
-            </p>
-          </div>
-        </div>
-  
-        <!-- Project 3 -->
-        <div class="col-md-12 mb-4 d-flex">
-          <img src="../static/images/music.jpg" class="img-fluid mr-4" alt="Music Recommendation System" style="max-width:200px; border-radius:10px;" loading="lazy">
-          <div>
-            <h4>
-              <a target="_blank" href="https://github.com/bhumikabiyani/music_recommendation">Music Recommendation System</a>
-              <small>(Machine Learning)</small>
-            </h4>
-            <p>
-              ML-based system that recommends songs based on user preferences using collaborative filtering and content-based filtering. Implemented in Python with Pandas, NumPy, and Scikit-learn.
-            </p>
+
+          <div class="resume-item">
+            <h4>Live Project Intern</h4>
+            <h5>Nov 2023 – Feb 2024</h5>
+            <p><em>Network18 Media & Investments Ltd, Remote</em></p>
+            <ul>
+              <li>Created a video summarization and clip extraction pipeline using Python, spaCy, AssemblyAI, MoviePy, and Generative AI techniques.</li>
+              <li>Applied text preprocessing, vectorization, normalization, and NLP pipelines for content analysis and shorts generation.</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ======= Skills Section ======= -->
+  <section class="ftco-section" id="skills-section">
+    <div class="container">
+      <div class="row justify-content-center pb-5">
+        <div class="col-md-12 heading-section text-center ftco-animate">
+          <h2 class="mb-4">Technical Skills</h2>
+        </div>
+      </div>
+      <div class="skills-modern ftco-animate">
 
-
-  <!-- <section class="ftco-section ftco-project" id="projects-section">
-      <div class="container">
-        <div class="row justify-content-center pb-5">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Our Projects</h2>
-            <p>
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia
-            </p>
+        <div class="skill-category">
+          <h4><i class="fas fa-code"></i> Languages</h4>
+          <div class="skill-pills">
+            <span class="skill-pill"><i class="fab fa-python"></i> Python</span>
+            <span class="skill-pill"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="skill-pill">TypeScript</span>
+            <span class="skill-pill">Golang</span>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div
-              class="project img ftco-animate d-flex justify-content-center align-items-center"
-              style="background-image: url(../static/images/project-4.jpg)"
-            >
-              <div class="overlay"></div>
-              <div class="text text-center p-4">
-                <h3><a href="#">Branding &amp; Illustration Design</a></h3>
-                <span>Web Design</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div
-              class="project img ftco-animate d-flex justify-content-center align-items-center"
-              style="background-image: url(../static/images/project-5.jpg)"
-            >
-              <div class="overlay"></div>
-              <div class="text text-center p-4">
-                <h3><a href="#">Branding &amp; Illustration Design</a></h3>
-                <span>Web Design</span>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-md-8">
-            <div
-              class="project img ftco-animate d-flex justify-content-center align-items-center"
-              style="background-image: url(../static/images/project-1.jpg)"
-            >
-              <div class="overlay"></div>
-              <div class="text text-center p-4">
-                <h3><a href="#">Branding &amp; Illustration Design</a></h3>
-                <span>Web Design</span>
+        <div class="skill-category">
+          <h4><i class="fas fa-layer-group"></i> Frontend & Mobile</h4>
+          <div class="skill-pills">
+            <span class="skill-pill"><i class="fab fa-react"></i> React</span>
+            <span class="skill-pill"><i class="fab fa-react"></i> React Native</span>
+            <span class="skill-pill">Redux</span>
+            <span class="skill-pill">Next.js</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4><i class="fas fa-server"></i> Backend & APIs</h4>
+          <div class="skill-pills">
+            <span class="skill-pill"><i class="fab fa-node-js"></i> Node.js</span>
+            <span class="skill-pill">Express</span>
+            <span class="skill-pill">FastAPI</span>
+            <span class="skill-pill">Flask</span>
+            <span class="skill-pill">REST APIs</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4><i class="fas fa-database"></i> Databases & Tools</h4>
+          <div class="skill-pills">
+            <span class="skill-pill">PostgreSQL</span>
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">Redis</span>
+            <span class="skill-pill"><i class="fab fa-docker"></i> Docker</span>
+            <span class="skill-pill"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="skill-pill">AWS</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4><i class="fas fa-brain"></i> AI / ML</h4>
+          <div class="skill-pills">
+            <span class="skill-pill">Machine Learning</span>
+            <span class="skill-pill">NLP</span>
+            <span class="skill-pill">LLM Applications</span>
+            <span class="skill-pill">Generative AI</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4><i class="fas fa-graduation-cap"></i> CS Fundamentals</h4>
+          <div class="skill-pills">
+            <span class="skill-pill">DSA</span>
+            <span class="skill-pill">OOP</span>
+            <span class="skill-pill">DBMS</span>
+            <span class="skill-pill">OS</span>
+            <span class="skill-pill">Computer Networks</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Stats Counter Section ======= -->
+  <section class="stats-section" id="stats-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-6 ftco-animate">
+          <div class="stat-item">
+            <div class="stat-number"><span class="stat-counter" data-target="1">0</span><span class="stat-suffix">+</span></div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 ftco-animate">
+          <div class="stat-item">
+            <div class="stat-number"><span class="stat-counter" data-target="4">0</span><span class="stat-suffix">+</span></div>
+            <div class="stat-label">Full Stack Projects</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 ftco-animate">
+          <div class="stat-item">
+            <div class="stat-number"><span class="stat-counter" data-target="3">0</span><span class="stat-suffix">+</span></div>
+            <div class="stat-label">Prod Apps Shipped</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 ftco-animate">
+          <div class="stat-item">
+            <div class="stat-number"><span class="stat-counter" data-target="1">0</span><span class="stat-suffix">st</span></div>
+            <div class="stat-label">Hackathon Winner</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Projects Section ======= -->
+  <section id="projects-section" class="ftco-section">
+    <div class="container">
+      <div class="col-md-12 heading-section text-center ftco-animate">
+        <h2 class="mb-5">Projects</h2>
+      </div>
+
+      <div class="row">
+        <!-- Project 1: AlgoMentor (FEATURED) -->
+        <div class="col-md-12 mb-5 ftco-animate">
+          <div class="project-card-glass row no-gutters">
+            <div class="col-md-6">
+              <div class="project-img-wrap">
+                <img src="../static/images/algomentor.jpg" alt="AlgoMentor - AI Mock Interview Platform" loading="lazy">
+                <div class="project-overlay"></div>
+                <span class="featured-badge">★ Featured</span>
               </div>
             </div>
-
-            <div
-              class="project img ftco-animate d-flex justify-content-center align-items-center"
-              style="background-image: url(../static/images/project-6.jpg)"
-            >
-              <div class="overlay"></div>
-              <div class="text text-center p-4">
-                <h3><a href="#">Branding &amp; Illustration Design</a></h3>
-                <span>Web Design</span>
+            <div class="col-md-6 d-flex align-items-center">
+              <div class="project-body w-100">
+                <h4><a target="_blank" href="https://dsa-interviewer-bot.vercel.app/">AlgoMentor</a></h4>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">Next.js</span>
+                  <span class="tech-tag">FastAPI</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">LLM</span>
+                  <span class="tech-tag">AWS Polly</span>
+                </div>
+                <ul>
+                  <li>Production-ready AI mock interview platform simulating real FAANG-style DSA interviews with adaptive questioning and automated evaluation.</li>
+                  <li>Integrated Groq Llama-3.3-70B for LLM inference, AWS Polly for neural TTS, and JWT + Google OAuth authentication.</li>
+                  <li>Realistic voice interaction, structured scoring, persistent history, and personalized feedback.</li>
+                </ul>
+                <a href="https://dsa-interviewer-bot.vercel.app/" class="project-link" target="_blank">View Live <i class="fas fa-arrow-right"></i></a>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col-md-12">
-                <div
-                  class="project img ftco-animate d-flex justify-content-center align-items-center"
-                  style="background-image: url(../static/images/project-2.jpg)"
-                >
-                  <div class="overlay"></div>
-                  <div class="text text-center p-4">
-                    <h3><a href="#">Branding &amp; Illustration Design</a></h3>
-                    <span>Web Design</span>
-                  </div>
-                </div>
+        </div>
+
+        <!-- Project 2: Movie Booking System -->
+        <div class="col-md-12 mb-5 ftco-animate">
+          <div class="project-card-glass row no-gutters">
+            <div class="col-md-6 order-md-last">
+              <div class="project-img-wrap">
+                <img src="../static/images/mbsImage.png" alt="Movie Booking System" loading="lazy">
+                <div class="project-overlay"></div>
               </div>
-              <div class="col-md-12">
-                <div
-                  class="project img ftco-animate d-flex justify-content-center align-items-center"
-                  style="background-image: url(../static/images/project-3.jpg)"
-                >
-                  <div class="overlay"></div>
-                  <div class="text text-center p-4">
-                    <h3><a href="#">Branding &amp; Illustration Design</a></h3>
-                    <span>Web Design</span>
-                  </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+              <div class="project-body w-100">
+                <h4><a target="_blank" href="https://github.com/bhumikabiyani/movie-booking-system">Movie Booking System</a></h4>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">React Native</span>
+                  <span class="tech-tag">Golang</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">Docker</span>
                 </div>
+                <ul>
+                  <li>End-to-end movie ticket booking system with real-time seat selection, show scheduling, and concurrency-safe seat locking.</li>
+                  <li>RESTful APIs with Go (transactions + schema design) and cross-platform app using React Native & TypeScript.</li>
+                </ul>
+                <a href="https://github.com/bhumikabiyani/movie-booking-system" class="project-link" target="_blank">View on GitHub <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Shorts Extractor -->
+        <div class="col-md-12 mb-5 ftco-animate">
+          <div class="project-card-glass row no-gutters">
+            <div class="col-md-6">
+              <div class="project-img-wrap">
+                <img src="../static/images/shorts.png" alt="Shorts Extractor" loading="lazy">
+                <div class="project-overlay"></div>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+              <div class="project-body w-100">
+                <h4><a target="_blank" href="https://github.com/bhumikabiyani/LongToShorts">Shorts Extractor</a></h4>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">NLP</span>
+                  <span class="tech-tag">LLM</span>
+                  <span class="tech-tag">AssemblyAI</span>
+                  <span class="tech-tag">Streamlit</span>
+                </div>
+                <p>
+                  Automated YouTube-style shorts from long videos using AssemblyAI for transcription, spaCy for similarity analysis, Google Generative AI for scripting, and MoviePy+FFmpeg for trimming. Deployed on Streamlit.
+                </p>
+                <a href="https://github.com/bhumikabiyani/LongToShorts" class="project-link" target="_blank">View on GitHub <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Music Recommendation System -->
+        <div class="col-md-12 mb-5 ftco-animate">
+          <div class="project-card-glass row no-gutters">
+            <div class="col-md-6 order-md-last">
+              <div class="project-img-wrap">
+                <img src="../static/images/music.jpg" alt="Music Recommendation System" loading="lazy">
+                <div class="project-overlay"></div>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+              <div class="project-body w-100">
+                <h4><a target="_blank" href="https://github.com/bhumikabiyani/music_recommendation">Music Recommendation System</a></h4>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Scikit-learn</span>
+                  <span class="tech-tag">Pandas</span>
+                  <span class="tech-tag">NumPy</span>
+                </div>
+                <p>
+                  ML-based system that recommends songs based on user preferences using collaborative filtering and content-based filtering. Built with Python, Pandas, NumPy, and Scikit-learn.
+                </p>
+                <a href="https://github.com/bhumikabiyani/music_recommendation" class="project-link" target="_blank">View on GitHub <i class="fas fa-arrow-right"></i></a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section> -->
+    </div>
+  </section>
 
-  <!-- <section class="ftco-section" id="blog-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Blog</h1>
-            <h2 class="mb-4">Our Blog</h2>
-            <p>
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia
-            </p>
-          </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-            <div class="blog-entry justify-content-end">
-              <a
-                href="single.html"
-                class="block-20"
-                style="background-image: url('images/image_1.jpg')"
-              >
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <div class="d-flex align-items-center mb-3 meta">
-                  <p class="mb-0">
-                    <span class="mr-2">June 21, 2019</span>
-                    <a href="#" class="mr-2">Admin</a>
-                    <a href="#" class="meta-chat"
-                      ><span class="icon-chat"></span> 3</a
-                    >
-                  </p>
-                </div>
-                <h3 class="heading">
-                  <a href="single.html"
-                    >Why Lead Generation is Key for Business Growth</a
-                  >
-                </h3>
-                <p>
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-            <div class="blog-entry justify-content-end">
-              <a
-                href="single.html"
-                class="block-20"
-                style="background-image: url('images/image_2.jpg')"
-              >
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <div class="d-flex align-items-center mb-3 meta">
-                  <p class="mb-0">
-                    <span class="mr-2">June 21, 2019</span>
-                    <a href="#" class="mr-2">Admin</a>
-                    <a href="#" class="meta-chat"
-                      ><span class="icon-chat"></span> 3</a
-                    >
-                  </p>
-                </div>
-                <h3 class="heading">
-                  <a href="single.html"
-                    >Why Lead Generation is Key for Business Growth</a
-                  >
-                </h3>
-                <p>
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-            <div class="blog-entry">
-              <a
-                href="single.html"
-                class="block-20"
-                style="background-image: url('images/image_3.jpg')"
-              >
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <div class="d-flex align-items-center mb-3 meta">
-                  <p class="mb-0">
-                    <span class="mr-2">June 21, 2019</span>
-                    <a href="#" class="mr-2">Admin</a>
-                    <a href="#" class="meta-chat"
-                      ><span class="icon-chat"></span> 3</a
-                    >
-                  </p>
-                </div>
-                <h3 class="heading">
-                  <a href="single.html"
-                    >Why Lead Generation is Key for Business Growth</a
-                  >
-                </h3>
-                <p>
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-  <!-- <section
-      class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img"
-      id="section-counter"
-    >
-      <div class="container">
-        <div class="row d-md-flex align-items-center">
-          <div
-            class="col-md d-flex justify-content-center counter-wrap ftco-animate"
-          >
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="100">0</strong>
-                <span>Awards</span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-md d-flex justify-content-center counter-wrap ftco-animate"
-          >
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="1200">0</strong>
-                <span>Complete Projects</span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-md d-flex justify-content-center counter-wrap ftco-animate"
-          >
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="1200">0</strong>
-                <span>Happy Customers</span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-md d-flex justify-content-center counter-wrap ftco-animate"
-          >
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="500">0</strong>
-                <span>Cups of coffee</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-  <br>
-
+  <!-- ======= Achievements Section ======= -->
   <section id="achievements-section" class="ftco-section">
     <div class="container">
       <div class="row justify-content-center pb-5">
@@ -914,117 +494,94 @@
           <h2 class="mb-4">Achievements</h2>
         </div>
       </div>
-  
+
       <div class="row justify-content-center">
-        <div class="col-md-6 d-flex align-items-stretch ftco-animate">
-          <div class="card shadow-lg" style="border-radius: 10px; overflow: hidden;">
-            <img src="../static/images/imhax.jpeg" class="card-img-top" alt="IMHAX 2025" style="height: 300px; object-fit: cover;">
-            <div class="card-body">
-              <p class="card-text">
-                Secured <strong>1st place</strong> in the prestigious IMHAX 2025 Inter-company Hackathon 
-                at Hella Infra Market, competing against top talent to deliver an innovative, scalable tech solution 
-                under 48 hours.
-              </p>
-            </div>
+        <!-- IMHAX Achievement -->
+        <div class="col-lg-6 col-md-10 mb-4 ftco-animate">
+          <div class="achievement-card text-center d-flex flex-column" style="padding: 2rem; height: 100%;">
+            <img src="../static/images/imhax.jpeg" alt="IMHAX 2025 Winners" style="width: 100%; height: 300px; object-fit: cover; border-radius: 12px; margin-bottom: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.1);">
+            <h4 class="mb-3 mt-auto">🏆 1st Place — IMHAX 2025</h4>
+            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8);">
+              Won the prestigious inter-company hackathon at Hella Infra Market. Competed against top talent to deliver an innovative, scalable tech solution in under 48 hours.
+            </p>
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7316819185865527296/?originTrackingId=u9vIBXX7XmLC%2Bsnwi1y5pw%3D%3D" class="project-link mt-3" target="_blank">View on LinkedIn <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+
+        <!-- LeetCode Achievement -->
+        <div class="col-lg-6 col-md-10 mb-4 ftco-animate">
+          <div class="achievement-card text-center d-flex flex-column" style="padding: 2rem; height: 100%;">
+            <img src="../static/images/lc.jpg" alt="LeetCode Top 29% Globally" style="width: 100%; height: 300px; object-fit: cover; border-radius: 12px; margin-bottom: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.1);">
+            <h4 class="mb-3 mt-auto">🔥 LeetCode — Top 29% Globally</h4>
+            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8);">
+              Solved 364+ problems across Easy, Medium, and Hard — ranking in the top 29.92% globally with a contest rating of 1,560. Earned the 100 Days Badge 2024.
+            </p>
+            <a href="https://leetcode.com/u/bhumi_121/" class="project-link mt-3" target="_blank">View Profile <i class="fas fa-external-link-alt"></i></a>
           </div>
         </div>
       </div>
     </div>
   </section>
-  
 
-
-  <section class="ftco-section ftco-hireme img margin-top" style="background-image: url(../static/images/bg_1.jpg
-      );z-index: 1;">
+  <!-- ======= Hire Me Section ======= -->
+  <section class="ftco-section ftco-hireme img margin-top" style="background-image: url(../static/images/bg_1.jpg);z-index: 1;">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-7 ftco-animate text-center">
-          <h2>I'm <span>Available</span> for freelancing / tech oriented job </h2>
-          <p>
-
-          </p>
+          <h2>I'm <span>Available</span> for full-time roles & collaborations</h2>
           <p class="mb-0">
-            <a href="#contact-section" class="btn btn-primary py-3 px-5">Hire me</a>
+            <a href="#contact-section" class="btn btn-primary py-3 px-5" id="hire-me-btn">Get in Touch</a>
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+  <section class="ftco-section contact-section" id="contact-section">
     <div class="container">
       <div class="row justify-content-center mb-5 pb-3">
         <div class="col-md-7 heading-section text-center ftco-animate">
-          <!-- <h1 class="big big-2">Contact</h1> -->
           <h2 class="mb-4">Contact Me</h2>
-          <p>
-
-          </p>
+          <p>Send me a message below, or find all my profile links
+            <br> in the <strong>floating sidebar to the left!</strong> 👈</p>
         </div>
       </div>
 
-      <div class="row d-flex contact-info mb-5">
-        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          <div class="align-self-stretch box p-4 text-center">
-            <h3 class="mb-4">Address</h3>
-            <p>Pali, Rajasthan ,INDIA</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          <div class="align-self-stretch box p-4 text-center">
-            <h3 class="mb-4">Email address 1</h3>
-            <p><a href="mailto:info@yoursite.com">bhumikabiyani121@gmail.com</a></p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          <div class="align-self-stretch box p-4 text-center">
-            <h3 class="mb-4">Email Address 2</h3>
-            <p><a href="mailto:info@yoursite.com">biyanibhumika121@gmail.com</a></p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          <div class="align-self-stretch box p-4 text-center">
-            <h3 class="mb-4">Website</h3>
-            <p><a href="#">bhumikabiyani.site/</a></p>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="row no-gutters block-9" id="jump">
+      <div class="row no-gutters block-9" id="jump" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; overflow: hidden; margin-bottom: 0;">
         <div class="col-md-6 order-md-last d-flex">
-          <form id="contact-form" class="bg-light p-4 p-md-5 contact-form" method="post">
+          <form id="contact-form" class="p-4 p-md-5 contact-form" style="width: 100%; border: none; background: transparent; box-shadow: none;" method="post">
+            <h3 class="mb-4 text-white">Send a Message</h3>
             <div class="form-group">
-              <input type="text" class="form-control" name="name" placeholder="Your Name" />
+              <input type="text" class="form-control" name="name" placeholder="Your Name" id="contact-name" required />
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" name="_replyto" placeholder="Your Email" />
+              <input type="email" class="form-control" name="_replyto" placeholder="Your Email" id="contact-email" required />
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" name="subject" placeholder="Subject" />
+              <input type="text" class="form-control" name="subject" placeholder="Subject" id="contact-subject" required />
             </div>
             <div class="form-group">
-              <textarea name="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+              <textarea name="message" cols="30" rows="7" class="form-control" placeholder="Message" id="contact-message" required></textarea>
             </div>
             <div class="form-group">
-              <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5" />
+              <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5" id="contact-submit" />
             </div>
           </form>
         </div>
         <div class="col-md-6 d-flex">
-          <div class="img" style="background-image: url(../static/images/about.png)"></div>
+          <div class="img" style="background-image: url(../static/images/about.png); width: 100%;"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="ftco-footer ftco-section">
+  <!-- ======= Footer ======= -->
+  <footer class="ftco-footer py-5">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center">
-          <p>
-            <i class="icon-heart color-danger" aria-hidden="true"></i> bhumika biyani
-            <a href="https://colorlib.com" target="_blank">portfolio</a>
+          <p class="mb-0" style="color: rgba(255,255,255,0.7);">
+            &copy; 2026 Bhumika Biyani. Built with <i class="fas fa-heart text-danger"></i> and passion.
           </p>
         </div>
       </div>
@@ -1034,39 +591,32 @@
   <script>
     // Handle form submission
     document.getElementById('contact-form').addEventListener('submit', function (event) {
-      event.preventDefault(); // Prevent the form from submitting
+      event.preventDefault();
 
-      // Perform any desired actions (e.g., displaying a thank you message)
       var thankYouMessage = document.createElement('p');
-      thankYouMessage.textContent = 'Thank you for submitting the form!';
+      thankYouMessage.textContent = 'Thank you for reaching out! I\'ll get back to you soon.';
+      thankYouMessage.style.color = '#ffbd39';
+      thankYouMessage.style.fontWeight = '600';
       document.getElementById('contact-form').appendChild(thankYouMessage);
 
-
-      // You can also send the form data to the server using AJAX if needed
-      // Example using Fetch API:
       var formData = new FormData(this);
-      // Reset the form fields
       document.getElementById('contact-form').reset();
       fetch('https://formspree.io/f/xleyellq', {
         method: 'POST',
         body: formData
       }).then(function (response) {
-        // Handle the response from the server if necessary
-
+        // Form submitted
       });
     });
-
   </script>
 
-
-  <!-- loader -->
+  <!-- Loader -->
   <div id="ftco-loader" class="show fullscreen">
     <svg class="circular" width="48px" height="48px">
       <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
       <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-        stroke="#F96D00" />
+        stroke="#ffbd39" />
     </svg>
-
   </div>
 
   <!-- Start Chatbot section -->
@@ -1075,36 +625,35 @@
       <div class="chatbox__support">
         <div class="chatbox__header">
           <div class="chatbox__image--header">
-            <img src="../static/images/me3.jpeg" alt="image" />
+            <img src="../static/images/me3.jpeg" alt="Bhumika's AI Assistant" />
           </div>
           <div class="chatbox__content--header">
             <h4 class="chatbox__heading--header">Virtual Bhumika</h4>
-            <!-- <p class="chatbox__description--header">Hi. My name is Sam. How can I help you?</p> -->
           </div>
         </div>
         <div class="chatbox__messages">
           <div></div>
         </div>
         <div class="chatbox__footer">
-          <input style="height: 2.7rem; font-size: 0.8rem;" type="text" placeholder="Write a message..." />
-          <button class="chatbox__send--footer send__button">
+          <input style="height: 2.7rem; font-size: 0.8rem;" type="text" placeholder="Ask me anything..." id="chatbot-input" />
+          <button class="chatbox__send--footer send__button" id="chatbot-send">
             <i class="fas fa-paper-plane"></i>
           </button>
         </div>
       </div>
     </div>
     <div class="chatbox__button">
-      <button>
-        <img src="/static/images/chatbox-icon.svg" />
+      <button id="chatbot-toggle">
+        <img src="/static/images/chatbox-icon.svg" alt="Chat" />
       </button>
     </div>
   </div>
   <!-- End of Chatbot -->
 
   <script>
-    var $SCRIPT_ROOT = "{{script_root}}";
+    var $SCRIPT_ROOT = "http://127.0.0.1:5000";
   </script>
-  <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+  <script type="text/javascript" src="../static/app.js"></script>
 
   <script src="../static/js/jquery.min.js"></script>
   <script src="../static/js/jquery-migrate-3.0.1.min.js"></script>
@@ -1118,10 +667,9 @@
   <script src="../static/js/aos.js"></script>
   <script src="../static/js/jquery.animateNumber.min.js"></script>
   <script src="../static/js/scrollax.min.js"></script>
-
   <script src="../static/js/main.js"></script>
   <script src="../static/js/main1.js"></script>
-  <script src="../static/app.js"></script>
+  <script src="../static/js/particles-config.js"></script>
 </body>
 
 </html>

@@ -32,67 +32,62 @@ safety_settings = [
   },
 ]
 
-model = genai.GenerativeModel(model_name="gemini-2.5-pro",
-                              generation_config=generation_config,
-                              safety_settings=safety_settings)
-
-convo = model.start_chat(history=[
-  {
-    "role": "user",
-    "parts": ["""
+SYSTEM_INSTRUCTION = """
 You are tasked with developing a chatbot for Bhumika Biyani's personal portfolio website. 
 The chatbot's main goal is to assist users in quickly finding information about her background, projects, skills, achievements, and other relevant details. 
 
 **Information about Bhumika (latest resume version):**
 Name: Bhumika Biyani
 Email: biyanibhumika121@gmail.com
+Phone: +91 7014225113
 LinkedIn: linkedin.com/in/biyanibhumika121
 Portfolio: https://www.bhumikabiyani.site/
 GitHub: github.com/bhumikabiyani
 
 Education:
 - Lovely Professional University, Jalandhar, Punjab  
-  B.Tech in Artificial Intelligence and Machine Learning (Sep 2021 – Present)  
-  GPA: 8.43/10 (till 5th Sem), Expected Graduation: June 2025  
-  Relevant Coursework: DSA, DBMS, OS, Computer Networks, Linear Algebra, Discrete Mathematics, AI
-- St. Paul’s School, Pali, Rajasthan – Senior Secondary (2020 – 2021), 89%
+  B.Tech in Computer Science and Engineering (AI-ML) (Sep 2021 – Aug 2025)  
+  CGPA: 8.3/10.0  
+  Coursework: Data Structures, Algorithms, DBMS, OS, CN, Cloud Computing, AI, ML, NLP
 
 Experience:
-- SDE Intern – Hella Infra Market (Oct 2024 – Present) 
-• Worked on React (Web) and React Native (Android & iOS) applications using TypeScript for type safety and maintainability.
-• Built a custom Backend-for-Frontend (BFF) from scratch using Node.js and Express, tailored to the needs of the
-frontend.
-• Created a unified Redux architecture as a POC to dynamically manage API calls and shared state across modules.
-• Built a dynamic form generation system based on JSON config, enabling scalable and reusable UI workflows.
-- Network18 Media & Investments Ltd – ML Live Project (Nov 2023 – Feb 2024)
-• Worked with large data sets, trained and fine-tuned ML models, and utilized MS Excel for data analysis.
-• Developed a tool to create news shorts from long news videos using Gemini API, LLM models, Assembly AI, and
-NLP pipelines. Applied text preprocessing, vectorization, normalization, and basics of neural networks.
+- Software Developer – Hella Infra Market Pvt Ltd, Bangalore (Aug 2025 – Present) 
+  • Designed and implemented a custom Backend for Frontend (BFF) using Node.js and Express to aggregate more than 8 microservice APIs, reducing frontend network calls by 30% and improving data-fetch efficiency.
+  • Designed a scalable Redux architecture to centralize API state management across modules, improving frontend maintainability and reducing duplicated data-fetching logic.
+  • Developed a dynamic form generation framework using JSON-driven configurations, enabling reusable UI workflows and supporting more than 10 configurable forms without additional frontend code.
+  
+- Software Developer Intern – Hella Infra Market Pvt Ltd, Bangalore (Oct 2024 – Aug 2025)
+  • Developed end-to-end features across web (React) and mobile (React Native: Android & iOS) platforms using TypeScript, improving reliability and reducing runtime errors.
+  • Integrated UI flows with backend microservices via well-structured REST APIs, improving data flow and reducing load time across key user journeys.
+
+- Live Project Intern – Network18 Media & Investments Ltd, Remote (Nov 2023 – Feb 2024)
+  • Created a video summarization and clip extraction pipeline using Python, spaCy, AssemblyAI, MoviePy, and Generative AI techniques.
 
 Key Projects:
-1. Movie Booking System – Full-stack cross-platform app using Golang backend (DDD architecture), React Native (TypeScript), PostgreSQL, Redux Observables, Docker, Kubernetes.
-2. Long Video to Short Conversion (LLM) – Automated YouTube shorts generation using AssemblyAI, spaCy, Google Generative AI, MoviePy, and Streamlit.
-3. Music Recommendation System – Hybrid collaborative/content filtering system using Python, Pandas, NumPy, Scikit-learn.
-4. AI ChatBot Assistant – Flask-based chatbot integrated with LangChain embeddings to answer portfolio queries.
-5. Fake News Prediction, Churn Prediction, Plagiarism Checker – ML-based projects.
+1. AlgoMentor (Next.js, FastAPI, Python, PostgreSQL) – Dec 2023
+   - Production-ready AI mock interview platform simulating real FAANG-style DSA interviews with adaptive questioning, strict time management, and automated evaluation workflows.
+   - Integrated Groq Llama-3.3-70B for LLM inference, AWS Polly for neural TTS, and implemented JWT + Google OAuth authentication.
+   - Implemented realistic voice interaction, structured scoring (correctness + communication), persistent interview history, and personalized feedback.
 
-Skills:
-- Programming: Python, Golang, Java, JavaScript/TypeScript
-- Frameworks/Tools: React Native, Redux Observables, Flask, Node.js
-- Databases: PostgreSQL, MySQL
-- Cloud/DevOps: Docker, Kubernetes
-- AI/ML: Machine Learning, NLP Pipelines, LLM Integration, Data Visualization
+2. Movie Booking System (React Native, Golang) – Nov 2024
+   - End-to-end movie ticket booking system with real-time seat selection, show scheduling, and concurrency-safe seat locking using a Golang backend and modular service architecture.
+   - Developed RESTful APIs with Go and PostgreSQL (transactions + schema design), and delivered a cross-platform booking app using React Native and TypeScript.
+
+3. Shorts Extractor (NLP & LLM) – Automated YouTube-style shorts from long videos using AssemblyAI, spaCy, Google Generative AI, MoviePy, and Streamlit.
+4. Music Recommendation System – Hybrid collaborative/content filtering using Python, Pandas, NumPy, Scikit-learn.
+5. AI ChatBot Assistant – Flask-based chatbot integrated with Gemini AI to answer portfolio queries.
+
+Technical Skills:
+- Programming Languages, Frontend & Mobile: Python, JavaScript, TypeScript, React, React Native
+- Backend & APIs: Node.js, Express, FastAPI, Golang (Basics)
+- Databases, Caching & Tools: MySQL, PostgreSQL, Redis, Docker, Git, AWS (Fundamentals)
+- Core Computer Science: Data Structures & Algorithms, OOP, DBMS, Operating Systems, Computer Networks
+- AI/ML: NLP, Machine Learning (Basics), LLM Applications, Generative AI
 
 Achievements:
 - 🏆 1st Place – IMHAX 2025 Inter-company Hackathon (Hella Infra Market)
 - 📜 Top 5% – Data Analytics Professionals (Pro5.ai)
 - 💻 Advanced SQL Coder – HackerRank
-
-Technical Skills
-• Programming Languages & Frameworks: React JS, React Native, Node JS ,Python, TypeScript, Redux Observables,
-Golang
-• Databases & Concepts: MySQL, OS , Data Science Concepts, Machine Learning, NLP Pipeline, LLM intermediate.
-• Other Technologies: Docker, Kubernetes, Automation, Web Scraping, Data Structures and Algorithms, MS Office.
 
 **Instructions:**
 1. Greet the user warmly and introduce yourself as Bhumika's portfolio assistant.
@@ -101,11 +96,15 @@ Golang
 4. If not asked for details, answer in 1-2 lines for quick responses.
 5. Keep tone friendly and professional.
 6. Provide links to her GitHub, LinkedIn, or portfolio if relevant.
-"""]
-  }
-])
+"""
 
+model = genai.GenerativeModel(model_name="gemini-3.1-flash-lite-preview",
+                              generation_config=generation_config,
+                              safety_settings=safety_settings)
+
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route("/")
@@ -119,13 +118,17 @@ def index_get():
 def predict():
     data = request.json
     print(data)
-    message = data['message']
-    global convo
+    message = data.get('message', '')
+    if not message:
+        return jsonify({"answer": "Please provide a message."})
+    
     try:
-      convo.send_message(message)
-      print(convo.last.text)
-      reply = convo.last.text
+      prompt = f"{SYSTEM_INSTRUCTION}\n\nUser Question: {message}\nAssistant:"
+      response = model.generate_content(prompt)
+      reply = response.text
+      print(reply)
     except Exception as e:
+      print(f"Error calling Gemini: {e}")
       reply = "Something went wrong. Please try again."
     return jsonify({"answer": reply})
 
