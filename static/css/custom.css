@@ -678,3 +678,13 @@
     bottom: 80px;
   }
 }
+
+/* --- Fix for mobile scroll over photo area --- */
+.hero, 
+.home-slider, 
+.slider-item, 
+.owl-carousel,
+.owl-carousel .owl-stage, 
+.owl-carousel.owl-drag .owl-item {
+  touch-action: pan-y !important;
+}
